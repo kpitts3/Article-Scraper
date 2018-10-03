@@ -1,0 +1,18 @@
+ {{#each articles}} {{#unless isSaved}}
+<div class="row">
+  <div class="col s12">
+
+    <div class="card horizontal" data-id={{_id}}>
+      <div class="card-stacked">
+        <a href={{link}}><img class="articleImg" src={{img}} alt="Link Image"><h3>{{title}}</h3></a>
+        <div class="card-action">
+          <button class="btn buttonFloatRight save" data-id={{_id}}>Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{/unless}} {{else}}
+<p>No Articles to grab</p>
+
+{{/each}}
